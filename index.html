@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="author" content="Sid Lee">
+    <link type="text/plain" rel="author" href="./humans.txt" />
+    
+    <!-- Opengraph / Twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <!-- <meta name="twitter:site" content="@user" /> -->
+    <!-- <meta property="og:title" name="twitter:title" content="Title" /> -->
+    <!-- <meta property="og:description" name="twitter:description" content="Description" /> -->
+    <meta property="og:type" content="website" />
+    <!-- <meta property="og:image" name="twitter:image" content="./" /> -->
+    <!-- <meta property="og:url" content="./" /> -->
+    
+    <!-- Favicons -->
+
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/main.css?v=20170531T161228Z"/>
+</head>
+
+<body>
+    <div>
+        <input type="number" name="nbr" value="5" min="1" max="15"><br>
+        <label>
+            <input type="radio" name="type" value="Paragraphs" checked>
+            Paragraphes
+        </label><br>
+        <label>
+            <input type="radio" name="type" value="Sentences">
+            Phrases
+        </label><br>
+        <label>
+            <input type="radio" name="type" value="Words">
+            Mots
+        </label><br>
+        <label>
+            <input type="radio" name="type" value="Lists">
+            Listes
+        </label><br>
+        <button class="js-generate">Générer du Sid Leepsum</button><br>
+        <div class="js-content"></div>
+    </div>
+
+    <!-- CDN -->
+    <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- CDN Fallback -->
+    <script>
+        window.jQuery || document.write('<script src="./assets/js/libs/jquery-3.2.1.min.js"><\/script>');
+    </script>
+
+    <!-- Boot -->
+    <script src="./assets/js/boot.js"></script>
+</body>
+</html>
