@@ -6,67 +6,309 @@ class LoremIpsum {
             nbr: document.querySelector('input[name="nbr"]'),
             type: document.querySelectorAll('input[name="type"]'),
             btn: document.querySelector('.js-generate'),
-            content: document.querySelector('.js-content')
+            content: document.querySelector('.js-content'),
+            footer: document.querySelector('.js-footer')
         };
 
         this.settings = {
             nbr: this.dom.nbr.value,
-            type: "Paragraphs",
-            nbrWords: 60,
-            avgWords: 24.460,
-            stdWords: 5.080
+            type: "Paragraphs"
         };
+
+        this.usedDictionnary = {}
 
         this.words = [
             "innovation", "big data", "statu quo", "convergence", "milléniaux", "influenceurs", "croissance organique", "incubateur", "chef de file", "multidisciplinaire", "plus de 400 artisans", "sur Exactlee", "feuilles de temps", "méthodologie agile", "le studio", "si c’est pas dans Jira", "rock star", "sur un channel Slack", "demande à Mom", "#CommeUnRêve", "Toé t’es un", "au grooming", "slack moi", "sur Freshlee", "monde moderne", "expérientielle", "image de marque", "un nouveau branding", "nouvelle campagne", "statu quo", "C2 Montréal", "aux Boomerangs", "summer friday", "avec Sitecore", "responsive", "menu végétarien", "dans le guide de l’artisan", "dans Dropbox", "à Sid Lee Land", "une évaluation 360",  "Related contents", "l’expérience usager", "approche créative", "bière et chips", "offsite", "en prod", "en QA", "mon café", "plus transparent", "milléniaux", "MVP", "synergie", "viral", "positionnement", "croissance organique", "retour sur investissement", "influenceur", "des solutions avant-gardistes", "possibilités innovantes", "sans silos", "partout dans le monde", "collaborative", "unique", "bold", "bâtisseur de marques", "en équipe", "médias sociaux", "transformateur de marque", "on refuse le statu quo", "l’économie de l’expérience", "folklore", "repousser les limites", "squad", "tribu", "restructuration", "repositionne", "très innovant", "airs ouvertes", "maquettes aux murs", "un super beau mandat", "comment mieux travailler ensemble", "faire des ponts", "pas acheté le nom de domaine", "renouveler l’hébergement", "un bel accomplissement", "la mère à Dan", "un newbie", "un technologue", "un rédacteur", "une analyste", "un directeur artistique", "une stratège", "un directeur conseil", "une productrice", "un réalisateur", "un gestionnaire de communauté", "un monteur", "un motion designer", "un designer UI", "un designer", "une journaliste", "un développeur", "un chargé de projets", "un ninja full-stack",  "un créateur d’idées", "un ,membre des talents", "un membre du studio", "dans la Jetson", "dans la Netscape", "dans la French laundry", "dans la salle Virgina Wolf", "la douche", "au bistro",  "au 8 queen", "au cacatrième", "au Pasta Pas l’choix", "aux sèches",  "au Pub Vic", "aux Soeurs grises", "à Montréal", "dans la salle verte", "à Jouvance", "sur les médias sociaux", "au offsite", "au Morons awards", "au Rockons awards", "au party d’été", "au daylee", "au party de Noel", "dans le meeting", "au kick off", "vendredi 5h", "lundi matin", "lors de la collation de 3h", "pendant le déjeuner"
         ];
 
-        this.data = {
-            persons: [
-                "la mère à Dan", "un newbie", "un influenceur", "un technologue", "un rédacteur", "une analyste", "un directeur artistique", "une stratège", "un directeur conseil", "une productrice", "un réalisateur", "un gestionnaire de communauté", "un monteur", "un motion designer", "un designer UI", "un designer", "une journaliste", "un développeur", "un chargé de projets", "un ninja full-stack", "un créateur d’idées", "un membre des talents", "un membre du studio"
-            ],
-            adjectives: [
-                "viral", "expérientielle", "MVP", "vrai", "engagé", "responsive", "transparent", "organique", "sans silos", "collaborative", "unique", "bold", "incroyable"
-            ],
-            qualifiers: [
-                "agent de changement", "sénior", "junior", "leader dans son domaine"
-            ],
-            actions: [
-                "a effacé", "a révolutionné", "a repoussé les limites de", "a gagné", "a révolutionné l’histoire du", "a refusé", "a engagé"
-            ],
-            places: [
-                "dans la Jetson", "dans la Netscape", "dans la French laundry", "dans la salle Virgina Wolf", "dans la douche", "au bistro",  "au 8 queen", "au cacatrième", "au Pasta Pas l’choix", "aux sèches",  "au Pub Vic", "aux Soeurs grises", "à Sid Lee Land", "à Montréal", "dans la salle verte", "à Jouvance", "sur les médias sociaux", "au offsite", "aux Boomerangs", "sur les médias sociaux", "au Morons awards", "au Rockons awards", "au party d’été", "au daylee", "au party de Noël", "dans le meeting", "au kick off", "sur Exactlee", "sur Slack", "sur Freshlee", "en prod", "en QA"
-            ],
-            times: [
-                "vendredi 5h", "lundi matin", "lors de la collation de 3h", "pendant le déjeuner", "l’autre jour", "pendant un summer friday"
-            ],
-            subjects: [
-                "la machine à café", "l'entreprise", "Sid Lee", "Dropbox", "la croissance", "du folklore", "des solutions avant-gardistes", "le retour sur investissement", "un monde moderne", "le meeting", "une vidéo", "sa feuille de temps", "Jira", "la méthodologie agile", "l'image de marque", "le branding", "la campagne publicitaire", "le statu quo", "la transparence", "le menu végétarien", "le guide de l’artisan", "une évaluation 360", "l’expérience usager", "son approche créative", "les milléniaux", "un MVP", "son positionnement"
+        this.dictionary = {
+            structures: [
+                ["*transitions", "?contexts", ",", "?protagonists", "?actions", "?subjects", "*enders", "."],
+                ["*transitions", "?protagonists", "?contexts", "?actions", "?subjects", "*enders", "."]
             ],
             transitions: [
-                "cependant,", "néanmoins,", "tandis que", "pour sa part,", " toutefois,"
+                "malheureusement, ou heureusement,", "heureusement,", "malheureusement,", "cependant,", "néanmoins,", "tandis que", "pour sa part,", " toutefois,", "pour la première fois de l’histoire,", "mais aussi", "sur cette note,", "pendant ce temps"
             ],
             enders: [
-                "#CommeUnRêve", "#NOT", ". Says no one ever", ""
+                "#CommeUnRêve", "Yeah, Yeah", "#ProudlyWastingTimeAndMoney", "<strong>#BeBold</strong>", "#DIYorDIE"
             ],
-            structures: [
-                ["*transitions", "*times", "places", ", ", "persons", "*qualifiers", "actions", "subjects", "*adjectives", "*enders", ". "],
-                ["*transitions", "places", ", ", "persons", "*qualifiers", "actions", "subjects", "*adjectives", "*enders", ". "],
-                ["*transitions", "persons", "qualifiers", ", ", "places", "actions", "subjects", "*adjectives", "*enders", ". "]
-            ]
+            contexts: {
+                options: ['places', 'times', ['places', 'times'], ['times', 'places']],
+                sep: ' '
+            },
+            times: {
+                structure: ['item'],
+                m: {
+                    single: {
+                        item: {
+                            required: 1,
+                            values: ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard"]
+                        }
+                    }
+                },
+                f: {
+                    single: {
+                        item: {
+                            required: 1,
+                            values: ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard"]
+                        }
+                    }
+                }
+            },
+            places: {
+                structure: ['item'],
+                m: {
+                    single: {
+                        item: {
+                            required: 1,
+                            values: ["au bistro", "au 8 Queen", "au <em>caca</em>trième", "au Pasta Pas l’choix", "aux sèches", "au scrum", "au Pub Vic", "en Asie", "aux Soeurs grises", "à Sid Lee Land", "à Montréal", "à Jouvance", "sur les médias sociaux", "au offsite", "aux Boomerangs", "sur les médias sociaux", "aux Morons awards", "aux Rockons awards", "au party d’été", "au daylee", "au party de Noël", "dans un meeting", "au <em>kick off</em>", "sur Exactlee", "sur Slack", "sur Freshlee", "en prod", "en QA"]
+                        }
+                    }
+                },
+                f: {
+                    single: {
+                        item: {
+                            required: 1,
+                            values: ["à la réception", "dans la Jetson", "dans la Netscape", "dans la French laundry","dans la salle Virgina Wolf", 'dans la <em>"douche"</em>', "dans la salle verte", "sur l'autoroute de l'information", "sur les intertubes", 'sur les <em>"zinternets"</em>', "sur feu QuickLee"]
+                        }
+                    }
+                }
+            },
+            actions: {
+                structure: ['item'],
+                m: {
+                    single: {
+                        item: {
+                            required: 1,
+                            values: ["a fait", "a recherché", "a offert", "a jeté un coup d’œil à", "a fait tout ce qu’il fallait pour rendre", "n'a pas peur de", "a mené à terme", "a imaginé", "a conçu", "a acquis", "est sorti", "a effacé", "a révolutionné", "a repoussé les limites de", "a gagné", "a révolutionné l’histoire du", "a refusé", "a engagé", "a propulsé", "a métamorphosé", "y voyait", "a senti", "a commencé à devenir", "a fait rayonner", "a créé", "est allez rencontrer", "a rencontré", "est revenu de", "a optimisé", "s’est fait remarquer par", "a <em>“pitché”</em>", "a changé", "a bâtit ", "a rejoint"]
+                        }
+                    },
+                    plural: {
+                        item: {
+                            required: 1,
+                            values: ["ont fait", "ont recherchés", "ont offert", "ont jetés un coup d’œil à", "ont fait tout ce qu’il fallait pour rendre", "n'ont pas peur de", "ont menés à terme", "ont imaginés", "ont conçus", "ont acquis", "sont sortis", "ont effacés", "ont révolutionnés", "ont repoussés les limites de", "ont gagnés", "ont révolutionnés l’histoire du", "ont refusés", "ont engagés", "ont propulsés", "ont métamorphosés", "y voyaient", "ont sentis", "ont commencés à devenir", "ont fait rayonner", "ont créés", "sont allez rencontrer", "ont rencontrés", "sont revenus de", "ont optimisés", "se sont fait remarquer par", "ont <em>“pitchés”</em>", "ont changés", "ont bâtit ", "ont rejoint"]
+                        }
+                    }
+                },
+                f: {
+                    single: {
+                        item: {
+                            required: 1,
+                            values: ["a fait", "a recherchée", "a offerte", "a jetée un coup d’œil à", "a fait tout ce qu’il fallait pour rendre", "n'a pas peur de", "a menée à terme", "a imaginée", "a conçue", "a acquis", "est sortie", "a effacée", "a révolutionnée", "a repoussée les limites de", "a gagnée", "a révolutionnée l’histoire du", "a refusée", "a engagée", "a propulsée", "a métamorphosée", "y voyait", "a sentie", "a commencée à devenir", "a fait rayonner", "a créé", "est allez rencontrer", "a rencontrée", "est revenue de", "a optimisée", "s’est fait remarquer par", "a <em>“pitchée”</em>", "a changée", "a bâtit ", "a rejoint"]
+                        }
+                    },
+                    plural: {
+                        item: {
+                            required: 1,
+                            values: ["ont fait", "ont recherchées", "ont offertes", "ont jetée un coup d’œil à", "ont fait tout ce qu’il fallait pour rendre", "n'ont pas peur de", "ont menées à terme", "ont imaginées", "ont conçues", "ont acquis", "ont sorties", "ont effacées", "omt révolutionnées", "ont repoussées les limites de", "ont gagnées", "ont révolutionnées l’histoire du", "ont refusées", "ont engagées", "ont propulsées", "ont métamorphosées", "y voyaient", "ont sentient", "ont commencées à devenir", "ont fait rayonner", "ont créés", "sont allez rencontrer", "ont rencontrées", "sont revenues de", "ont optimisées", "se sont fait remarquer par", "ont <em>“pitchées”</em>", "ont changées", "ont bâtit ", "ont rejoint"]
+                        }
+                    }
+                },
+            },
+            protagonists: {
+                options: ['persons', 'persons', 'roles', 'roles', ['persons', 'persons'], ['roles', 'persons']],
+                sep: [' et ', ' & ', ' assisté de ', " avec l'aide de "]
+            },
+            persons: {
+                structure: ['prefix', 'item'],
+                m: {
+                    single: {
+                        prefix: {
+                            required: 0.25,
+                            values: ["l'excellent", "le grand", "l'incontournable", "l'incomparable"]
+                        },
+                        item: {
+                            required: 1,
+                            values: ["Jean-Francois Bouchard", "Philippe Meunier", "Martin Gauthier", "Techno-Phil", "Simon Arnold", "Andrew Moore", "Guillaume Raymond", "Brian McIntyre", "Louis Jutras", "Hugo Voisine", "Nicolas Trudel", "Jonathan Brûlé", "Frederic Landry", "Patrick Freedom Mayer", "Nicolas Huget Latour", "Yannick Meunier", "David Emmanuel Gadoury", "Maxime Daoust", "Daniel Petitclerc", "René-Charles Arseneau", "Vincent Ramsay", "Francis Ardouin Rodriguez", "Tommy Vincent Mathieu", "Pierre-Paul Samson", "Pierre Lambert", "Éric Briand", "Jonathan Pinard", "Vincent Paradis", "Marc-A. Monette", "Bo Tellier", "Arthur Loiselle", "Guillaume Cardell", "Christian Quenneville", "Yanick Bédard", "François Forget", "Daniel Fortier", "Vincent Hamel", "Marc Lalande", "Alex Pilon"]
+                        }
+                    }
+                },
+                f: {
+                    single: {
+                        prefix: {
+                            required: 0.25,
+                            values: ["l'excellente", "la grande", "la magnifique", "l'incomparable", "la remarquable"]
+                        },
+                        item: {
+                            required: 1,
+                            values: ["Mylène St-Pierre", "Ariane Audet-Ménard", "Thithu Vu", "Caroline Royer", 'Cynthia <em>"Mom"</em> Baillargeon', "Marie-France St-Pierre", "Chloé Brossard", "Stephanie Villani", "Émilie Thibault", "Anne-Marie Champoux", "Maïly Huynh Lapointe", "Mélissa Gilbert", "Marie-Claude Lafleur", "Sarah Lussier", "Karen Gaudreau", "Lee Sanderson", "Vanessa Daly", "Marie-Elaine Benoit", "Anne-Marie Castonguay"]
+                        }
+                    }
+                }
+            },
+            roles: {
+                structure: ['determining', 'prefix', 'item', 'specialisation', 'suffix'],
+                m: {
+                    single: {
+                        determining: {
+                            required: 1,
+                            values: ['un']
+                        },
+                        prefix: {
+                            required: 0.25,
+                            values: ["guru", "prophète", "ambassadeur", "ninja", "évangeliste", "lead", "newbie", "motion"]
+                        },
+                        item: {
+                            required: 1,
+                            values: ["directeur", "producteur", "réalisateur", "chargé de projets", "influenceur", "technologue", "rédacteur", "analyste", "stratège", "gestionnaire", "monteur", "designer", "developpeur", "journaliste", "concepteur-rédacteur", "coordonateur", "artisan", "infographiste", "vidéaste", "scrum master"]
+                        },
+                        specialisation: {
+                            required: 0.4,
+                            values: ["artistique", "conseil", "technique", "UI", "UX", "offline", "de communauté", "de vidéos", "full-stack", "front-end", "back-end", "au contenu", "système", "de stratégie", "de produit", "des relations publiques"]
+                        },
+                        suffix: {
+                            required: 0.35,
+                            values: ["agent de changement", "sénior", "junior", '<em>"kickass"</em>', "trop geek", "multidisciplinaire", "difficile à étiqueter", "moderne", "leader dans son domaine", "marquant", "de l'époque", "novateur", "avant-gardistes", "audacieux", "persévérants", "curieux", "hors pair", "attentionné"]
+                        }
+                    }
+                },
+                f: {
+                    single: {
+                        determining: {
+                            required: 1,
+                            values: ['une'],
+                        },
+                        prefix: {
+                            required: 0.25,
+                            values: ["vraie licorne de", "guru", "prophète", "ambassadrice", "ninja", "évangeliste", "newbie"],
+                        },
+                        item: {
+                            required: 1,
+                            values: ["directrice", "productrice", "réalisatrice", "chargée de projets"],
+                        },
+                        specialisation: {
+                            required: 0.4,
+                            values: ["artistique", "conseil", "technique", "UI", "de communauté", "de vidéos", "full-stack"],
+                        },
+                        suffix: {
+                            required: 0.35,
+                            values: ["agente de changement", "sénior", "junior", "aguérie", "trop geek", "marquante"]
+                        }
+                    }
+                }
+            },
+            subjects: {
+                structure: ['prefix', 'item', 'suffix'],
+                m: {
+                    single: {
+                        prefix: {
+                            required: 0.25,
+                            default: 'le',
+                            values: ["ce genre de", "le deuxième", "le seul", "notre", "notre premier", "son", "un grand", "un nouveau"]
+                        },
+                        item: {
+                            required: 1,
+                            values: ["Cirque du Soleil", "Dropbox", "Jira", "MVP", "Sid Lee", "Sid Lee University", "atelier", "avantage", "branding", "bureau", "carton", "changement", "client", "collectif", "compte Adidas", "compte Vidéotron", "compte Banque Nationale", "compétiteur", "consommateur", "contenu", "contrat", "cours des choses", "design", "domaine", "défis", "engagement", "folklore", "guide", "mandat", "marché", "marketing", "meeting", "menu", "monde", "monde de possibilités", "point de contact", "positionnement", "retour", "réseau", "sentiers battus", "site mobile", "statu quo", "virage", "volet", "voyage", "échec", "éventail de services", "événement"]
+                        },
+                        suffix: {
+                            required: 0.5,
+                            values: ["américain", "au monde", "canadien", "commandité", "d'aujourd’hui", "de Sid Lee", "de cœur", "de détail", "de l’artisan", "international", "moderne", "numérique", "pertinent", "plus fort", "plus vaste", "possible", "professionnel", "profond", "quotidien", "usager", "végétarien", "de 6 mois 400 mille"]
+                        }
+                    },
+                    plural: {
+                        prefix: {
+                            required: 0.25,
+                            default: 'les',
+                            values: ["les seuls", "nos", "nos premiers", "ses", "de grands", "des nouveaux"]
+                        },
+                        item: {
+                            required: 1,
+                            values: ["ateliers", "avantages", "bureaux", "changements", "clients", "collectifs", "compétiteurs", "consommateurs", "contenus", "designs", "domaines", "défis", "engagements", "mandats", "marchés", "meetings", "menus", "mondes", "points de contact", "réseaux", "réussites", "sentiers battus", "sites mobiles", "virages", "voyages", "échecs", "événements"]
+                        },
+                        suffix: {
+                            required: 0.5,
+                            values: ["américains", "au monde", "canadiens", "commandités", "d'aujourd’hui", "de Sid Lee", "de détail", "de l’artisan", "internationaux", "modernes", "numériques", "pertinents", "plus fort", "plus vaste", "possibles", "professionnels", "profonds", "quotidien", "usager", "végétariens"]
+                        }
+                    }
+                },
+                f: {
+                    single: {
+                        prefix: {
+                            required: 0.25,
+                            default: 'la',
+                            values: ["la seule", "notre première", "sa", "une nouvelle", "une zesty de"]
+                        },
+                        item: {
+                            required: 1,
+                            values: ["agence", "analyse", "approche", "aptitude", "architecture", "aventure", "bulle", "campagne publicitaire", "capsule vidéo", "chose", "collation", "compagnie", "croissance", "culture", "donne", "entreprise", "expérience", "feuille de temps", "force", "histoire", "idée", "image", "industrie", "innovation", "interactivité", "machine à café", "modernisation", "méthodologie", "oeuvre", "opportunité", "plateforme", "porte", "publicité", "reflexion", "réputation", "scène", "solution", "transparence", "vidéo", "vision", "évaluation"]
+                        },
+                        suffix: {
+                            required: 0.5,
+                            values: ["360", "agile", "américaine", "avant-gardiste", "canadienne", "complète", "créative", "de marque", "d’amitié", "d’entrée", "extrême", "folle", "hors pair", "internationale", "internet", "progressiste", "simple", "stratégique", "sur investissement", "valorisante", "à l’échelle mondiale"]
+                        }
+                    },
+                    plural: {
+                        prefix: {
+                            required: 0.25,
+                            default: 'les',
+                            values: ["les seules", "nos premières", "ses", "ses nouvelles", "des zesty de"]
+                        },
+                        item: {
+                            required: 1,
+                            values: ["agences", "analyses", "approches", "aptitudes", "architectures", "aventures", "bulles", "campagnes publicitaire", "choses", "collations", "compagnies", "croissances", "cultures", "entreprises", "expériences", "feuilles de temps", "forces", "histoires", "idées", "images", "industries", "innovations", "interactivités", "machines à café", "modernisations", "méthodologies", "oeuvres", "opportunités", "plateformes", "portes", "publicités", "reflexions", "réputations", "solutions", "vidéos", "visions", "évaluations"]
+                        },
+                        suffix: {
+                            required: 0.5,
+                            values: ["360", "agiles", "américaines", "avant-gardistes", "canadiennes", "complètes", "créatives", "de marques", "d’amitié", "d’entrée", "extrêmes", "folles", "hors pairs", "internationales", "internet", "progressistes", "simples", "stratégiques", "valorisantes", "à l’échelle mondiale"]
+                        }
+                    }
+                }
+            }
         }
 
         this.replacements = [
             [" ,", ","],
-            [" de le", " du"],
+            [" à les ", " aux "],
+            [" à le ", " au "],
+            [" le a", " l'a"],
+            [" le e", " l'e"],
+            [" le é", " l'é"],
+            [" le h", " l'h"],
+            [" le i", " l'i"],
+            [" le o", " l'o"],
+            [" le u", " l'u"],
+            [" le y", " l'y"],
+            [" la a", " l'a"],
+            [" la e", " l'e"],
+            [" la é", " l'é"],
+            [" la h", " l'h"],
+            [" la i", " l'i"],
+            [" la o", " l'o"],
+            [" la u", " l'u"],
+            [" la y", " l'y"],
             [" du un", " d'un"],
-            [" du une", " d'une"],
+            [" du une ", " d'une "],
             [" du la", " de la"],
-            [" du le", " du"],
-            [" de un", " d'un"],
-            [" de une", " d'une"],
-            [" que au", "qu'au"],
-            [" que aux", "qu'aux"]
+            [" du l'", " de l'"],
+            [" du le ", " du "],
+            [" du les ", " des "],
+            [" du du ", " du "],
+            [" du des ", " des "],
+            [" du sa ", " de sa "],
+            [" de a", " d'a"],
+            [" de A", " d'A"],
+            [" de h", " d'h"],
+            [" de i", " d'i"],
+            [" de o", " d'o"],
+            [" de u", " d'u"],
+            [" de y", " d'y"],
+            [" de les ", " des "],
+            [" de des ", " des "],
+            [" de du ", " du "],
+            [" du un", " d'un"],
+            [" que au", " qu'au"],
+            [" que un", " qu'un"],
+            [" que une", " qu'une"],
+            [" que aux", " qu'aux"],
+            [" sa e", " son e"],
+            [" sa é", " son é"],
+            [" sa h", " son h"],
+            [" sa i", " son i"],
+            [" sa o", " son o"],
+            [" sa u", " son u"],
+            [" sa y", " son y"],
+            [" que à", " qu'à"],
+            [" par du ", " par un "]
         ]
     }
 
@@ -74,6 +316,7 @@ class LoremIpsum {
     //--------------------------------------------------------------
     init() {
         this.bindEvents();
+        this.setup();
     }
 
     bindEvents() {
@@ -85,64 +328,173 @@ class LoremIpsum {
     }
 
     setup() {
-        this.genP();
-        let res = '';
+        let sidleepsum = '';
         
         for (let i=0; i<this.settings.nbr; i++) {
-            res += this[`generate${this.settings.type}`]();
+            sidleepsum += this.fixLigation( this[`generate${this.settings.type}`]() );
         }
 
-        this.dom.content.innerHTML = res;
+        let resume = this.getResume(sidleepsum);
+        this.dom.content.innerHTML = `<article class="article">${sidleepsum}</article>`;
+        this.dom.footer.innerHTML = `<p><strong>${resume}</strong></p>`;
     }
 
-    genP() {
+    generateParagraphs() {
         let sentencesNbr = Math.floor( Math.random() * 6) + 2; // 2 - 8 phrases
-        let paragraph = '';
+        let paragraphArr = [];
 
         for(let x=0; x<sentencesNbr; x++) {
             let hasTransition = Math.round( Math.random() );
-            let sentence = this.capitalize( this.genS() );
-            paragraph += sentence;
+            let sentence = this.generateSentences();
+            paragraphArr.push( sentence );
         }
-        
-        paragraph = this.fixLigation( paragraph );
 
-        console.log(paragraph);
+        return `<p>${paragraphArr.join(" ")}</p>`;
     }
 
-    genS() {
-        let structure = this.data.structures[ Math.floor(Math.random() * this.data.structures.length) ];
-        let sentence = '';
+    generateSentences() {
+        let structure = this.dictionary.structures[ Math.floor(Math.random() * this.dictionary.structures.length) ];
+        let protagonist = {
+            gender: '',
+            number: ''
+        };
+
+        let sentenceArr = [];
 
         for(let x=0; x<structure.length; x++) {
-            let sep = ' ';
-            let section = structure[x];
+            let type = structure[x];
+            let firstChar = type.charAt(0);
 
-            if( section.charAt(0) === '*') {
-                if( Math.random() * 4 < 1 ) {
-                    section = section.slice(1);
+            if(firstChar === '*') {
+                if( Math.random() * 6 < 1 ) {
+                    type = type.slice(1);
                 } else {
                     continue;
                 }
-            }
+            } else if(firstChar === '?') {
+                let obj = '';
+
+                if( type.slice(1) === 'actions' ) {
+                    obj = this.getSection( type.slice(1), protagonist);
+                } else {
+                    obj = this.getSection( type.slice(1) );
+                }
+
+                if( type.slice(1) === 'protagonists' ) {
+                    protagonist = {
+                        gender: obj.gender,
+                        number: obj.number
+                    };
+                }
+                sentenceArr.push( obj.text );
+                continue;
+            } 
             
-            let category = this.data[ section ];
+            let category = this.dictionary[ type ];
             let literal = typeof category === "undefined";
 
-            if(x === structure.length-2) {
-                sep = '';
-            }
-
             if(literal) {
-                sentence += section;
+                sentenceArr.push( type );
             } else {
-                sentence += category[ Math.floor(Math.random() * category.length) ] + sep;
+                sentenceArr.push( this.getRandomWord( type ) );
             }
         }
-        return sentence;
+
+        return this.capitalize( sentenceArr.join(' ') );
     }
 
-    fixLigation(str) {
+    getSection( originalType, preset = {} ) {
+        let typeObj = this.dictionary[originalType];
+        let obj = '';
+
+        if( typeObj.hasOwnProperty('options') ) {
+            let type = this.getArrRandomValue( typeObj.options );
+
+            if(typeof type === 'string') {
+                obj = this.getPartial(type, preset);
+            } else if(typeof type === 'object') {
+                let partialsArr = [];
+
+                for(let x=0; x<type.length; x++) {
+                    partialsArr.push( this.getPartial(type[x], preset) );
+                }
+
+                obj = this.mergePartials(partialsArr, originalType, typeObj);
+            }
+        } else {
+            obj = this.getPartial(originalType, preset);
+        }
+
+        return obj;
+    }
+
+    getPartial( type = 'persons', preset = {}) {
+        if(typeof preset.gender === 'undefined')
+            preset.gender = Math.random() >= 0.5 ? 'm' : 'f';
+
+        let textArr = [];
+        let typeObj = this.dictionary[type];
+        let sub = Object.keys( typeObj[ preset.gender ] );
+        let subPos = Math.floor( sub.length * Math.random() );
+
+        if(typeof preset.number === 'undefined')
+            preset.number = sub[subPos];
+
+        let obj = typeObj[ preset.gender ][ preset.number ];
+
+        for(let x=0; x<this.dictionary[type].structure.length; x++) {
+            let category = this.dictionary[type].structure[x];
+
+            if(obj[category]['required'] >= Math.random()) {
+                textArr.push( this.getArrRandomValue( obj[category]['values'] ) );
+            } else if(typeof obj[category]['default'] !== 'undefined') {
+                textArr.push( obj[category]['default'] );
+            }
+        }
+
+        console.log(textArr.join(' '));
+
+        return { type: type, text: textArr.join(' '), gender: preset.gender, number: preset.number };
+    }
+
+    mergePartials(arr, type, typeObj) {
+        let obj = arr[0];
+
+        for(let x=1; x<arr.length; x++) {
+            if( arr[x].gender !== obj.gender )
+                obj.gender = 'm';
+
+            obj.text += this.getArrRandomValue( typeObj.sep ) + arr[x].text;
+        }
+
+        obj.type = type;
+        obj.number = 'plural';
+
+        return obj;
+    }
+
+    getArrRandomValue( arr ) {
+        return arr[Math.floor( arr.length * Math.random() )];
+    }
+
+    getRandomWord( typeOfWord ) {
+        let wordIndex = Math.floor( Math.random() * this.dictionary[ typeOfWord ].length );
+
+        if(!typeof this.usedDictionnary[ typeOfWord ] !== 'undefined')
+            this.usedDictionnary[ typeOfWord ] = []; 
+
+        if( this.usedDictionnary[ typeOfWord ].indexOf( wordIndex ) === -1 ) { // if the word isn't in the array of used words.
+            this.usedDictionnary[ typeOfWord ].push( wordIndex );
+
+            if( this.usedDictionnary[ typeOfWord ].length > 4 )  // make sure the same word dosn't get repeated too quickly
+                this.usedDictionnary[ typeOfWord ].shift();
+
+            return this.dictionary[ typeOfWord ][ wordIndex ];
+        } else 
+            return this.getRandomWord( typeOfWord );
+    }
+
+    fixLigation( str ) {
         for(let x=0; x<this.replacements.length; x++) {
             str = str.replace(new RegExp(this.replacements[x][0], 'g'), this.replacements[x][1]);
         }
@@ -150,24 +502,13 @@ class LoremIpsum {
         return str;
     }
 
-    capitalize(str) {
+    capitalize( str ) {
         return str.charAt(0).toUpperCase() + str.slice(1);
-    }
-
-    generateParagraphs() {
-        let sentencesNbr = Math.floor( Math.random() * 6) + 2; // 2 - 8 phrases
-        let sentences = '';
-
-        for(let i=0; i<sentencesNbr; i++) {
-            let sentence = this.generateSentences();
-            sentences += `${sentence} `;
-        }
-
-        return `<p>${sentences}</p>`;
     }
 
     generateWords() {
         let res = '';
+
         for (let i=0; i<this.settings.nbr; i++) {
             let word = this.generate();
             res += `${word}`;
@@ -180,46 +521,18 @@ class LoremIpsum {
         return `<li>${sentence}</li>`;
     }
 
-    generateSentences() {
-        let words = [];
-        let wordsNbr = Math.floor( Math.random() * 8) + 12; // 8-20 words
-        let index = 0;
-
-        for (let i = 0; i < wordsNbr; i++) {
-            let pos = Math.floor( Math.random() * this.words.length );
-            let word = this.words[pos];
-            let l = word.split(' ').length;
-
-            if(l > 0) 
-                i += l-1;
-            
-            if (index > 0 && words[index - 1] === word)
-                index -= 1;
-            else
-                words[index] = word;
-
-            index++;
+    getResume( text ) {
+        let resume = `${this.settings.nbr} ${this.settings.type}`;
+        
+        if(this.settings.type !== 'Words') {
+            let wordsNbr = text.split(' ').length;
+            resume += `, ${wordsNbr} mots`;
         }
 
-        let commasNbr = Math.floor( Math.random() * 3); // 0-3 ","
+        let charactersNbr = text.replace(/[^A-Z]/gi, '').length;
+        resume += `, ${charactersNbr} caractères de <a href="sidleepsum.smnarnold.com">Sid Lee<em>psum</em></a> généré`;
 
-        if(commasNbr > 0) {
-            for (let i=0; i <commasNbr; i++) {
-                let avg = Math.floor(words.length / commasNbr);
-                let pos = Math.floor( Math.random() * (avg - 1));
-
-                if (pos > 0 && pos < avg - 1) {
-                    words.splice(pos + avg * i, 0, ',');
-                }
-            }
-        }
-
-        words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1); /* Majuscule sur la première lettre. */
-        words[words.length - 1] += '. '; /* Point à la fin d'une phrase. */
-        let sentence = words.join(' ');
-        sentence = sentence.replace(/ , /g, ', '); /* Ajustement des virgules*/
-    
-        return sentence;
+        return resume;
     }
 }
 

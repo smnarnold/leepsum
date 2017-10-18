@@ -4,59 +4,80 @@
     <!-- Metas -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="author" content="Sid Lee">
+    <title>Sid Leepsum</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Simon Arnold">
     <link type="text/plain" rel="author" href="./humans.txt" />
     
     <!-- Opengraph / Twitter card -->
     <meta name="twitter:card" content="summary" />
-    <!-- <meta name="twitter:site" content="@user" /> -->
-    <!-- <meta property="og:title" name="twitter:title" content="Title" /> -->
-    <!-- <meta property="og:description" name="twitter:description" content="Description" /> -->
+    <meta name="twitter:site" content="@smnarnold" />
+    <meta property="og:title" name="twitter:title" content="Sid Leepsum" />
+    <meta property="og:description" name="twitter:description" content="Parce qu'en essayant de toujours être 'cutting edge' on saute parfoit on abuse parfoit de certain 'Buzzwords'." />
     <meta property="og:type" content="website" />
     <!-- <meta property="og:image" name="twitter:image" content="./" /> -->
-    <!-- <meta property="og:url" content="./" /> -->
+    <meta property="og:url" content="http://sidleepsum.smnarnold.com" />
     
     <!-- Favicons -->
 
 
     <!-- CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Eczar:800|Work+Sans:400,700">
     <link rel="stylesheet" href="./assets/css/main.css?v=20170531T161228Z"/>
 </head>
 
 <body>
-    <div>
-        <input type="number" name="nbr" value="5" min="1" max="15"><br>
-        <label>
-            <input type="radio" name="type" value="Paragraphs" checked>
-            Paragraphes
-        </label><br>
-        <label>
-            <input type="radio" name="type" value="Sentences">
-            Phrases
-        </label><br>
-        <label>
-            <input type="radio" name="type" value="Words">
-            Mots
-        </label><br>
-        <label>
-            <input type="radio" name="type" value="Lists">
-            Listes
-        </label><br>
-        <button class="js-generate">Générer du Sid Leepsum</button><br>
-        <div class="js-content"></div>
-    </div>
+    <header class="main-header">
+        <div class="wrapper">
+            <h1 class="main-title">Sid Lee<em>psum</em></h1>
+            <nav class="main-options">
+                <div class="cell input">
+                    <input type="number" name="nbr" value="3" min="1" max="15">
+                </div>
 
-    <!-- CDN -->
-    <script src="//code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+                <div class="cell radios">
+                    <div class="cell radio">
+                        <label>
+                            <input type="radio" name="type" value="Paragraphs" checked>
+                            <span class="lbl">Paragraphes</span>
+                        </label>
+                    </div>
+                    <div class="cell radio">
+                        <label>
+                            <input type="radio" name="type" value="Sentences">
+                            <span class="lbl">Phrases</span>
+                        </label>
+                    </div>
+                    <div class="cell radio">
+                        <label>
+                            <input type="radio" name="type" value="Words">
+                            <span class="lbl">Mots</span>
+                        </label>
+                    </div>
+                    <div class="cell radio">
+                        <label>
+                            <input type="radio" name="type" value="Lists">
+                            <span class="lbl">Listes</span>
+                        </label>
+                    </div>
+                </div>
 
-    <!-- CDN Fallback -->
-    <script>
-        window.jQuery || document.write('<script src="./assets/js/libs/jquery-3.2.1.min.js"><\/script>');
-    </script>
+                <div class="cell button">
+                    <button class="btn js-generate">Générer</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="wrapper js-content"></div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="wrapper js-footer"></div>
+    </footer>
 
     <!-- Boot -->
-    <script src="./assets/js/boot.js"></script>
+    <script async src="./assets/js/boot.js"></script>
 </body>
 </html>
