@@ -28,7 +28,7 @@ class LoremIpsum {
             data.roles.f.single.specialisation.values,
         );
 
-        this.usedDictionnary = {}
+        this.usedDictionnary = [];
     }
 
     /**
@@ -47,6 +47,7 @@ class LoremIpsum {
 
     setup() {
         let content = '';
+        this.usedDictionnary = [];
         
         for (let i=0; i<this.settings.nbr; i++) {
             content += this.getLoremIpsum( this.settings.type );
@@ -55,6 +56,7 @@ class LoremIpsum {
         content = this.fixLigatures( content );
 
         this.updateResume( content );
+        console.log( this.usedDictionnary );
         this.dom.content.innerHTML = `<article class="article">${content}</article>`;
     }
 
@@ -187,7 +189,7 @@ class LoremIpsum {
             let category = data[type].structure[x];
 
             if(obj[category]['required'] >= Math.random())
-                textArr.push( this.getArrRandomValue( obj[category]['values'] ) );
+                textArr.push( this.getArrRandomNoRepeat( obj[category]['values'] ) );
             else if(typeof obj[category]['default'] !== 'undefined')
                 textArr.push( obj[category]['default'] );
         }
@@ -217,6 +219,17 @@ class LoremIpsum {
 
     getArrRandomValue( arr ) {
         return arr[Math.floor( arr.length * Math.random() )];
+    }
+
+    getArrRandomNoRepeat( arr ) {
+        let word = arr[Math.floor( arr.length * Math.random() )];
+
+        if( this.usedDictionnary.indexOf( word ) === -1 ) {
+            if( word.length > 3)
+                this.usedDictionnary.push( word );
+            return arr[Math.floor( arr.length * Math.random() )];
+        } else
+            return this.getArrRandomValue( arr );
     }
 
     getRandomWord( typeOfWord ) {
