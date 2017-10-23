@@ -4,7 +4,7 @@
         ["*transitions", "?protagonists", "?contexts", "?actions", "?subjects", "*enders", "."]
     ],
     "transitions": [
-        "malheureusement, ou heureusement,", "heureusement,", "malheureusement,", "cependant,", "néanmoins,", "tandis que", "pour sa part,", "toutefois,", "pour la première fois de l’histoire,", "mais aussi", "sur cette note,", "pendant ce temps"
+        "malheureusement, ou heureusement,", "heureusement,", "malheureusement,", "et malgré nos succès", "cependant,", "néanmoins,", "tandis que", "pour sa part,", "toutefois,", "pour la première fois de l’histoire,", "mais aussi", "sur cette note,", "pendant ce temps"
     ],
     "enders": [
         "<a href='https://twitter.com/search?q=%23CommeUnRêve'>#CommeUnRêve</a>", "Yeah, Yeah", "<a href='https://twitter.com/search?q=%23ProudlyWastingTimeAndMoney'>#ProudlyWastingTimeAndMoney</a>", "<a href='https://twitter.com/search?q=%23BeBold'><strong>#BeBold</strong></a>", "<a href='https://twitter.com/search?q=%23DIYorDIE'>#DIYorDIE</a>"
@@ -19,7 +19,7 @@
             "single": {
                 "item": {
                     "required": 1,
-                    "values": ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard"]
+                    "values": ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "au Sid Lee day", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "pendant un midi formation", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard"]
                 }
             }
         },
@@ -27,7 +27,7 @@
             "single": {
                 "item": {
                     "required": 1,
-                    "values": ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard"]
+                    "values": ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "Un lendemain de veille", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard"]
                 }
             }
         }
@@ -38,7 +38,7 @@
             "single": {
                 "item": {
                     "required": 1,
-                    "values": ["au bistro", "au 8 Queen", "au <em>caca</em>trième", "au Pasta Pas l’choix", "aux sèches", "au scrum", "au Pub Vic", "en Asie", "aux Soeurs grises", "à Sid Lee Land", "à Montréal", "à Jouvance", "sur les médias sociaux", "au offsite", "aux Boomerangs", "sur les médias sociaux", "aux Morons awards", "aux Rockons awards", "au party d’été", "au daylee", "au party de Noël", "dans un meeting", "au <em>kick off</em>", "sur Exactlee", "sur Slack", "sur Freshlee", "en prod", "en QA"]
+                    "values": ["au bistro", "au Sitecore Symposium", "à SXSW", "au 8 Queen", "au <em>caca</em>trième", "au Naked Lunch", "au festival de Cannes", "à Vegas", "au Pasta Pas l’choix", "aux sèches", "au scrum", "au Pub Vic", "en Asie", "aux Soeurs grises", "à Sid Lee Land", "à Montréal", "à Jouvance", "sur les médias sociaux", "sur Sid Lee Collective", "au offsite", "aux Boomerangs", "sur les médias sociaux", "aux Morons awards", "aux Rockons awards", "au party d’été", "au daylee", "au party de Noël", "dans un meeting", "au <em>kick off</em>", "sur Exactlee", "sur Slack", "sur Freshlee", "en prod", "en QA"]
                 }
             }
         },
@@ -46,7 +46,7 @@
             "single": {
                 "item": {
                     "required": 1,
-                    "values": ["à la réception", "dans la Jetson", "dans la Netscape", "dans la French laundry","dans la salle Virgina Wolf", "dans la <em>\"douche\"</em>", "dans la salle verte", "sur l'autoroute de l'information", "sur les intertubes", "sur les <em>\"zinternets\"</em>", "sur feu QuickLee"]
+                    "values": ["à la réception", "dans la Jetson", "dans la salle de méditation", "dans la Netscape", "dans la French laundry","dans la salle Virgina Wolf", "dans la <em>\"douche\"</em>", "dans la salle verte", "sur l'autoroute de l'information", "sur les intertubes", "sur les <em>\"zinternets\"</em>", "sur feu QuickLee"]
                 }
             }
         }
@@ -57,13 +57,13 @@
             "single": {
                 "item": {
                     "required": 1,
-                    "values": ["a fait", "a recherché", "a offert", "travaillé en étroite collaboration avec", "a participé activement a", "a jeté un coup d’œil à", "challengé", "s'est fait challenger par", "a fait tout ce qu’il fallait pour rendre", "n'a pas peur de", "a mené à terme", "a imaginé", "a conçu", "a acquis", "est sorti", "a effacé", "a révolutionné", "a repoussé les limites de", "a gagné", "a révolutionné l’histoire du", "a refusé", "a engagé", "a propulsé", "a métamorphosé", "y voyait", "a senti", "a commencé à devenir", "a fait rayonner", "a créé", "est allez rencontrer", "a rencontré", "est revenu de", "a optimisé", "s’est fait remarquer par", "a <em>“pitché”</em>", "a changé", "a bâtit ", "a rejoint"]
+                    "values": ["a fait", "a recherché", "a vraiment rocké", "a échafaudé", "a offert", "travaillé en étroite collaboration avec", "a participé activement a", "a jeté un coup d’œil à", "challengé", "s'est fait challenger par", "a fait tout ce qu’il fallait pour rendre", "n'a pas peur de", "a mené à terme", "a imaginé", "a conçu", "a acquis", "est sorti", "a effacé", "a révolutionné", "a repoussé les limites de", "a gagné", "a révolutionné l’histoire du", "a refusé", "a engagé", "a propulsé", "a métamorphosé", "y voyait", "a senti", "a commencé à devenir", "a fait rayonner", "a créé", "est allez rencontrer", "a rencontré", "est revenu de", "a optimisé", "s’est fait remarquer par", "a <em>“pitché”</em>", "a changé", "a bâtit ", "a rejoint"]
                 }
             },
             "plural": {
                 "item": {
                     "required": 1,
-                    "values": ["ont fait", "ont recherchés", "ont offert", "ont jetés un coup d’œil à", "ont fait tout ce qu’il fallait pour rendre", "n'ont pas peur de", "ont menés à terme", "ont imaginés", "ont conçus", "ont acquis", "sont sortis", "ont effacés", "ont révolutionnés", "ont repoussés les limites de", "ont gagnés", "ont révolutionnés l’histoire du", "ont refusés", "ont engagés", "ont propulsés", "ont métamorphosés", "y voyaient", "ont sentis", "ont commencés à devenir", "ont fait rayonner", "ont créés", "sont allez rencontrer", "ont rencontrés", "sont revenus de", "ont optimisés", "se sont fait remarquer par", "ont <em>“pitchés”</em>", "ont changés", "ont bâtit ", "ont rejoint"]
+                    "values": ["ont fait", "ont recherchés", "ont échafaudés", "ont offert", "ont échangés", "ont jammés", "ont jetés un coup d’œil à", "ont fait tout ce qu’il fallait pour rendre", "n'ont pas peur de", "ont menés à terme", "ont imaginés", "ont conçus", "ont acquis", "sont sortis", "ont effacés", "ont révolutionnés", "ont repoussés les limites de", "ont gagnés", "ont révolutionnés l’histoire du", "ont refusés", "ont engagés", "ont propulsés", "ont métamorphosés", "y voyaient", "ont sentis", "ont commencés à devenir", "ont fait rayonner", "ont créés", "sont allez rencontrer", "ont rencontrés", "sont revenus de", "ont optimisés", "se sont fait remarquer par", "ont <em>“pitchés”</em>", "ont changés", "ont bâtit ", "ont rejoint"]
                 }
             }
         },
@@ -71,13 +71,13 @@
             "single": {
                 "item": {
                     "required": 1,
-                    "values": ["a fait", "a recherchée", "a offerte", "a jetée un coup d’œil à", "a fait tout ce qu’il fallait pour rendre", "n'a pas peur de", "a menée à terme", "a imaginée", "a conçue", "a acquis", "est sortie", "a effacée", "a révolutionnée", "a repoussée les limites de", "a gagnée", "a révolutionnée l’histoire du", "a refusée", "a engagée", "a propulsée", "a métamorphosée", "y voyait", "a sentie", "a commencée à devenir", "a fait rayonner", "a créé", "est allez rencontrer", "a rencontrée", "est revenue de", "a optimisée", "s’est fait remarquer par", "a <em>“pitchée”</em>", "a changée", "a bâtit ", "a rejoint"]
+                    "values": ["a fait", "a recherchée", "a offerte", "a échafaudée", "a jetée un coup d’œil à", "a fait tout ce qu’il fallait pour rendre", "n'a pas peur de", "a menée à terme", "a imaginée", "a conçue", "a acquis", "est sortie", "a effacée", "a révolutionnée", "a repoussée les limites de", "a gagnée", "a révolutionnée l’histoire du", "a refusée", "a engagée", "a propulsée", "a métamorphosée", "y voyait", "a sentie", "a commencée à devenir", "a fait rayonner", "a créé", "est allez rencontrer", "a rencontrée", "est revenue de", "a optimisée", "s’est fait remarquer par", "a <em>“pitchée”</em>", "a changée", "a bâtit ", "a rejoint"]
                 }
             },
             "plural": {
                 "item": {
                     "required": 1,
-                    "values": ["ont fait", "ont recherchées", "ont offertes", "ont jetée un coup d’œil à", "ont fait tout ce qu’il fallait pour rendre", "n'ont pas peur de", "ont menées à terme", "ont imaginées", "ont conçues", "ont acquis", "ont sorties", "ont effacées", "omt révolutionnées", "ont repoussées les limites de", "ont gagnées", "ont révolutionnées l’histoire du", "ont refusées", "ont engagées", "ont propulsées", "ont métamorphosées", "y voyaient", "ont sentient", "ont commencées à devenir", "ont fait rayonner", "ont créés", "sont allez rencontrer", "ont rencontrées", "sont revenues de", "ont optimisées", "se sont fait remarquer par", "ont <em>“pitchées”</em>", "ont changées", "ont bâtit ", "ont rejoint"]
+                    "values": ["ont fait", "ont recherchées", "ont offertes", "ont échangées", "ont échafaudées", "ont jetée un coup d’œil à", "ont fait tout ce qu’il fallait pour rendre", "n'ont pas peur de", "ont menées à terme", "ont imaginées", "ont conçues", "ont acquis", "ont sorties", "ont effacées", "omt révolutionnées", "ont repoussées les limites de", "ont gagnées", "ont révolutionnées l’histoire du", "ont refusées", "ont engagées", "ont propulsées", "ont métamorphosées", "y voyaient", "ont sentient", "ont commencées à devenir", "ont fait rayonner", "ont créés", "sont allez rencontrer", "ont rencontrées", "sont revenues de", "ont optimisées", "se sont fait remarquer par", "ont <em>“pitchées”</em>", "ont changées", "ont bâtit ", "ont rejoint"]
                 }
             }
         },
@@ -96,7 +96,7 @@
                 },
                 "item": {
                     "required": 1,
-                    "values": ["Jean-Francois Bouchard", "Philippe Meunier", "Martin Gauthier", "Techno-Phil", "Simon Arnold", "Andrew Moore", "Guillaume Raymond", "Brian McIntyre", "Louis Jutras", "Hugo Voisine", "Nicolas Trudel", "Jonathan Brûlé", "Frederic Landry", "Patrick Freedom Mayer", "Nicolas Huget Latour", "Yannick Meunier", "David Emmanuel Gadoury", "Maxime Daoust", "Daniel Petitclerc", "René-Charles Arseneau", "Vincent Ramsay", "Francis Ardouin Rodriguez", "Tommy Vincent Mathieu", "Pierre-Paul Samson", "Pierre Lambert", "Éric Briand", "Jonathan Pinard", "Vincent Paradis", "Marc-A. Monette", "Bo Tellier", "Arthur Loiselle", "Guillaume Cardell", "Christian Quenneville", "Yanick Bédard", "François Forget", "Daniel Fortier", "Vincent Hamel", "Marc Lalande", "Alex Pilon"]
+                    "values": ["Jean-Francois Bouchard", "Philippe Meunier", "Martin Gauthier", "Techno-Phil", "Simon Arnold", "Andrew Moore", "Guillaume Raymond", "Brian McIntyre", "Louis Jutras", "Hugo Voisine", "Nicolas Trudel", "Jonathan Brûlé", "Frederic Landry", "Patrick Freedom Mayer", "Nicolas Huget Latour", "Yannick Meunier", "David Emmanuel Gadoury", "Maxime Daoust", "Daniel Petitclerc", "René-Charles Arseneau", "Vincent Ramsay", "Francis Ardouin Rodriguez", "Tommy Vincent Mathieu", "Pierre-Paul Samson", "Pierre Lambert", "Éric Briand", "Jonathan Pinard", "Vincent Paradis", "Marc-A. Monette", "Bo Tellier", "Arthur Loiselle", "Guillaume Cardell", "Christian Quenneville", "Yanick Bédard", "François Forget", "Daniel Fortier", "Vincent Hamel", "Marc Lalande", "Alex Pilon", "Jean Bart"]
                 }
             }
         },
@@ -108,7 +108,7 @@
                 },
                 "item": {
                     "required": 1,
-                    "values": ["Mylène St-Pierre", "Ariane Audet-Ménard", "Thithu Vu", "Caroline Royer", "Cynthia <em>\"Mom\"</em> Baillargeon", "Marie-France St-Pierre", "Chloé Brossard", "Stephanie Villani", "Émilie Thibault", "Anne-Marie Champoux", "Maïly Huynh Lapointe", "Mélissa Gilbert", "Marie-Claude Lafleur", "Sarah Lussier", "Karen Gaudreau", "Lee Sanderson", "Vanessa Daly", "Marie-Elaine Benoit", "Anne-Marie Castonguay"]
+                    "values": ["Mylène St-Pierre", "Ariane Audet-Ménard", "Thithu Vu", "Caroline Royer", "Cynthia <em>\"Mom\"</em> Baillargeon", "Marie-France St-Pierre", "Chloé Brossard", "Stephanie Villani", "Émilie Thibault", "Anne-Marie Champoux", "Maïly Huynh Lapointe", "Mélissa Gilbert", "Marie-Claude Lafleur", "Sarah Lussier", "Karen Gaudreau", "Lee Sanderson", "Vanessa Daly", "Marie-Elaine Benoit", "Anne-Marie Castonguay", "Camille Cardin-Goyer", "Catherine Martel"]
                 }
             }
         }
@@ -135,7 +135,7 @@
                 },
                 "suffix": {
                     "required": 0.35,
-                    "values": ["agent de changement", "comptant quelques années d’expérience", "avec plusieurs années d’expérience", "sénior", "junior", "<em>\"kickass\"</em>", "trop geek", "multidisciplinaire", "difficile à étiqueter", "moderne", "leader dans son domaine", "marquant", "de l'époque", "novateur", "avant-gardistes", "qui fit avec nous", "audacieux", "persévérants", "curieux", "hors pair", "attentionné", "polyvalant"]
+                    "values": ["agent de changement", "comptant quelques années d’expérience", "avec plusieurs années d’expérience", "frais sortis de l’école", "sénior", "junior", "<em>\"kickass\"</em>", "trop geek", "multidisciplinaire", "difficile à étiqueter", "moderne", "leader dans son domaine", "marquant", "de l'époque", "novateur", "avant-gardistes", "qui fit avec nous", "audacieux", "persévérants", "curieux", "hors pair", "attentionné", "polyvalant"]
                 }
             }
         },
@@ -159,7 +159,7 @@
                 },
                 "suffix": {
                     "required": 0.35,
-                    "values": ["agente de changement", "sénior", "junior", "aguérie", "trop geek", "marquante"]
+                    "values": ["agente de changement", "sénior", "junior", "frais sortis de l’école", "aguérie", "trop geek", "marquante"]
                 }
             }
         }
@@ -175,11 +175,11 @@
                 },
                 "item": {
                     "required": 1,
-                    "values": ["Cirque du Soleil", "Dropbox", "Jira", "MVP", "Sid Lee", "Sid Lee University", "atelier", "avantage", "branding", "bureau", "carton", "changement", "client", "collectif", "compte Adidas", "compte Vidéotron", "compte Banque Nationale", "compétiteur", "consommateur", "contenu", "contrat", "cours des choses", "design", "domaine", "défis", "engagement", "folklore", "guide", "mandat", "marché", "marketing", "meeting", "menu", "monde", "monde de possibilités", "point de contact", "positionnement", "produit", "retour", "réseau", "sentiers battus", "site mobile", "statu quo", "virage", "volet", "voyage", "échec", "éventail de services", "événement", "secteur"]
+                    "values": ["Cirque du Soleil", "Dropbox", "Jira", "MVP", "Sid Lee", "Sid Lee University", "atelier", "avantage", "branding", "bureau", "carton", "changement", "client", "collectif", "compte Adidas", "compte Vidéotron", "compte Banque Nationale", "compétiteur", "consommateur", "contenu", "contrat", "cours des choses", "design", "domaine", "défis", "engagement", "folklore", "guide", "incubateur", "joyeux chaos", "mandat", "marché", "marketing", "meeting", "menu", "monde", "monde de possibilités", "point de contact", "positionnement", "produit", "retour", "réseau", "sentiers battus", "site mobile", "statu quo", "virage", "volet", "voyage", "échec", "éventail de services", "événement", "secteur"]
                 },
                 "suffix": {
                     "required": 0.5,
-                    "values": ["américain", "au monde", "canadien", "commandité", "d'aujourd’hui", "de Sid Lee", "de cœur", "de détail", "de l’artisan", "international", "moderne", "numérique", "pertinent", "plus fort", "plus vaste", "possible", "professionnel", "profond", "quotidien", "usager", "végétarien", "de 6 mois 400 mille"]
+                    "values": ["américain", "au monde", "canadien", "commandité", "d'aujourd’hui", "de Sid Lee", "de cœur", "de détail", "de l’artisan", "international", "glorieux", "moderne", "numérique", "pertinent", "plus fort", "plus vaste", "possible", "professionnel", "profond", "quotidien", "usager", "végétarien", "de 6 mois 400 0000$"]
                 }
             },
             "plural": {
@@ -190,11 +190,11 @@
                 },
                 "item": {
                     "required": 1,
-                    "values": ["ateliers", "avantages", "bureaux", "changements", "clients", "collectifs", "compétiteurs", "consommateurs", "contenus", "designs", "domaines", "défis", "engagements", "mandats", "marchés", "meetings", "menus", "mondes", "points de contact", "réseaux", "réussites", "sentiers battus", "sites mobiles", "virages", "voyages", "échecs", "événements", "secteurs"]
+                    "values": ["ateliers", "avantages", "bureaux", "changements", "clients", "collectifs", "compétiteurs", "consommateurs", "contenus", "designs", "domaines", "défis", "engagements", "mandats", "marchés", "meetings", "menus", "mondes", "plans", "points de contact", "réseaux", "réussites", "sentiers battus", "sites mobiles", "virages", "voyages", "échecs", "événements", "secteurs"]
                 },
                 "suffix": {
                     "required": 0.5,
-                    "values": ["américains", "au monde", "canadiens", "commandités", "d'aujourd’hui", "de Sid Lee", "de détail", "de l’artisan", "internationaux", "modernes", "numériques", "pertinents", "plus fort", "plus vaste", "possibles", "professionnels", "profonds", "quotidien", "usager", "végétariens"]
+                    "values": ["américains", "au monde", "canadiens", "commandités", "d'aujourd’hui", "de Sid Lee", "de détail", "de l’artisan", "délirants", "internationaux", "modernes", "numériques", "pertinents", "plus fort", "plus vaste", "possibles", "professionnels", "profonds", "quotidien", "usager", "végétariens"]
                 }
             }
         },
@@ -207,7 +207,7 @@
                 },
                 "item": {
                     "required": 1,
-                    "values": ["agence", "analyse", "approche", "aptitude", "architecture", "aventure", "bulle", "campagne publicitaire", "capsule vidéo", "chose", "collation", "collaboration","compagnie", "croissance", "culture", "donne", "entreprise", "expérience", "feuille de temps", "force", "histoire", "idée", "image", "industrie", "innovation", "interactivité", "machine à café", "modernisation", "méthodologie", "oeuvre", "opportunité", "plateforme", "porte", "publicité", "reflexion", "réputation", "scène", "solution", "transparence", "vidéo", "vision", "évaluation", "start-up"]
+                    "values": ["agence", "analyse", "approche", "aptitude", "architecture", "aventure", "bulle", "campagne publicitaire", "capsule vidéo", "chose", "collation", "collaboration","compagnie", "croissance", "culture", "donne", "entreprise", "expérience", "feuille de temps", "force", "histoire", "idée", "image", "industrie", "innovation", "interactivité", "machine à café", "maquette", "modernisation", "méthodologie", "oeuvre", "opportunité", "plateforme", "photo", "porte", "publicité", "reflexion", "réputation", "scène", "solution", "transparence", "vidéo", "vision", "évaluation", "start-up", "zone de confort"]
                 },
                 "suffix": {
                     "required": 0.5,
@@ -222,11 +222,11 @@
                 },
                 "item": {
                     "required": 1,
-                    "values": ["agences", "analyses", "approches", "aptitudes", "architectures", "aventures", "bulles", "campagnes publicitaire", "choses", "collations", "compagnies", "croissances", "cultures", "entreprises", "expériences", "feuilles de temps", "forces", "histoires", "idées", "images", "industries", "innovations", "interactivités", "machines à café", "modernisations", "méthodologies", "oeuvres", "opportunités", "plateformes", "portes", "problématiques", "publicités", "reflexions", "réputations", "solutions", "vidéos", "visions", "évaluations", "start-up"]
+                    "values": ["agences", "analyses", "approches", "aptitudes", "architectures", "aventures", "bulles", "campagnes publicitaire", "choses", "collations", "compagnies", "croissances", "cultures", "entreprises", "expériences", "feuilles de temps", "forces", "histoires", "idées", "images", "industries", "innovations", "interactivités", "machines à café", "maquettes", "modernisations", "méthodologies", "oeuvres", "opportunités", "plateformes", "photos", "portes", "problématiques", "publicités", "reflexions", "réputations", "solutions", "vidéos", "visions", "évaluations", "start-up"]
                 },
                 "suffix": {
                     "required": 0.5,
-                    "values": ["360", "agiles", "américaines", "avant-gardistes", "canadiennes", "complètes", "créatives", "de marques", "d’amitié", "d’entrée", "extrêmes", "folles", "hors pairs", "innovantes", "internationales", "internet", "progressistes", "simples", "stratégiques", "valorisantes", "à l’échelle mondiale"]
+                    "values": ["360", "agiles", "américaines", "avant-gardistes", "canadiennes", "complètes", "créatives", "de marques", "d’amitié", "d’entrée", "extrêmes", "folles", "hors pairs", "innovantes", "insoupçonnées", "internationales", "internet", "progressistes", "simples", "stratégiques", "valorisantes", "à l’échelle mondiale"]
                 }
             }
         }
