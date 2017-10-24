@@ -27,7 +27,7 @@
             "single": {
                 "item": {
                     "required": 1,
-                    "values": ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "Un lendemain de veille", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard", "au début des années 2000"]
+                    "values": ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "un lendemain de veille", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard", "au début des années 2000"]
                 }
             }
         }
