@@ -4,7 +4,7 @@
         ["*transitions", "?protagonists", "?contexts", "?actions", "?subjects", "*enders", "."]
     ],
     "transitions": [
-        "malheureusement, ou heureusement,", "heureusement,", "malheureusement,", "et malgré nos succès", "cependant,", "néanmoins,", "tandis que", "pour sa part,", "toutefois,", "pour la première fois de l’histoire,", "mais aussi", "sur cette note,", "pendant ce temps"
+        "malheureusement, ou heureusement,", "heureusement,", "malheureusement,", "et malgré nos succès,", "cependant,", "néanmoins,", "tandis que", "pour sa part,", "toutefois,", "pour la première fois de l’histoire,", "mais aussi", "sur cette note,", "pendant ce temps"
     ],
     "enders": [
         "<a href='https://twitter.com/search?q=%23CommeUnRêve'>#CommeUnRêve</a>", "Yeah, Yeah", "<a href='https://twitter.com/search?q=%23ProudlyWastingTimeAndMoney'>#ProudlyWastingTimeAndMoney</a>", "<a href='https://twitter.com/search?q=%23BeBold'><strong>#BeBold</strong></a>", "<a href='https://twitter.com/search?q=%23DIYorDIE'>#DIYorDIE</a>"
@@ -96,7 +96,7 @@
                 },
                 "item": {
                     "required": 1,
-                    "values": ["Jean-Francois Bouchard", "Philippe Meunier", "Martin Gauthier", "Techno-Phil", "Simon Arnold", "Andrew Moore", "Guillaume Raymond", "Brian McIntyre", "Louis Jutras", "Hugo Voisine", "Nicolas Trudel", "Jonathan Brûlé", "Frederic Landry", "Patrick Freedom Mayer", "Nicolas Huget Latour", "Yannick Meunier", "David Emmanuel Gadoury", "Maxime Daoust", "Daniel Petitclerc", "René-Charles Arseneau", "Vincent Ramsay", "Francis Ardouin Rodriguez", "Tommy Vincent Mathieu", "Pierre-Paul Samson", "Pierre Lambert", "Éric Briand", "Jonathan Pinard", "Vincent Paradis", "Marc-A. Monette", "Bo Tellier", "Arthur Loiselle", "Guillaume Cardell", "Christian Quenneville", "Yanick Bédard", "François Forget", "Daniel Fortier", "Vincent Hamel", "Marc Lalande", "Alex Pilon", "Jean Bart"]
+                    "values": ["Jean-Francois Bouchard", "Philippe Meunier", "Martin Gauthier", "Techno-Phil", "Simon Arnold", "Andrew Moore", "Guillaume Raymond", "Brian McIntyre", "Louis Jutras", "Hugo Voisine", "Nicolas Trudel", "Jonathan Brûlé", "Frederic Landry", "Patrick Freedom Mayer", "Nicolas Huget Latour", "Yannick Meunier", "David Emmanuel Gadoury", "Maxime Daoust", "Daniel Petitclerc", "René-Charles Arseneau", "Vincent Ramsay", "Francis Ardouin Rodriguez", "Tommy Vincent Mathieu", "Pierre-Paul Samson", "Pierre Lambert", "Éric Briand", "Jonathan Pinard", "Vincent Paradis", "Marc-A. Monette", "Bo Tellier", "Arthur Loiselle", "Guillaume Cardell", "Christian Quenneville", "Yanick Bédard", "François Forget", "Daniel Fortier", "Vincent Hamel", "Marc Lalande", "Alex Pilon", "Jean Bart", "Maxime Levasseur", "Anthony Greene", "Antoine Lorquet-Garneau", "Bernard Bolduc", "Charles St-Onge", "Christian Boutet", "Daniel Fortier", "Eric Briand", "Jean-Philippe Gomez-Sanchez", "Marc-Antoine Leclerc", "Nicolas England", "Samuel Potvin", "Tiago Silva", "Pier-Luc Beaulieu", "Jean-Michel Leroux", "Yannick Chauvette", "Jeff Letor-Bebion"]
                 }
             }
         },
@@ -108,7 +108,7 @@
                 },
                 "item": {
                     "required": 1,
-                    "values": ["Mylène St-Pierre", "Ariane Audet-Ménard", "Thithu Vu", "Caroline Royer", "Cynthia <em>\"Mom\"</em> Baillargeon", "Marie-France St-Pierre", "Chloé Brossard", "Stephanie Villani", "Émilie Thibault", "Anne-Marie Champoux", "Maïly Huynh Lapointe", "Mélissa Gilbert", "Marie-Claude Lafleur", "Sarah Lussier", "Karen Gaudreau", "Lee Sanderson", "Vanessa Daly", "Marie-Elaine Benoit", "Anne-Marie Castonguay", "Camille Cardin-Goyer", "Catherine Martel"]
+                    "values": ["Mylène St-Pierre", "Ariane Audet-Ménard", "Thithu Vu", "Caroline Royer", "Cynthia <em>\"Mom\"</em> Baillargeon", "Marie-France St-Pierre", "Chloé Brossard", "Stephanie Villani", "Émilie Thibault", "Anne-Marie Champoux", "Maïly Huynh Lapointe", "Mélissa Gilbert", "Marie-Claude Lafleur", "Sarah Lussier", "Karen Gaudreau", "Lee Sanderson", "Vanessa Daly", "Marie-Elaine Benoit", "Anne-Marie Castonguay", "Camille Cardin-Goyer", "Catherine Martel", "Madelaine Paquette", "Annie Desrocher", "Arianne Goulet", "Caroline Frenette", "Caroline Loubert", "Chrystelle Ndahimana", "Cybel Lussier", "Elsa Giguere", "Emilie Parent", "Catherine Richard", "Emilie Joanisse", "Sarah Maude Raymond", "Sarah Berubé"]
                 }
             }
         }

@@ -9,7 +9,8 @@
     white-space: nowrap;
 
     &::before {
-      background-color: palette(pink);
+      //background-color: palette(pink);
+      background-color: currentColor;
       bottom: 0;
       content: '';
       height: 1px;

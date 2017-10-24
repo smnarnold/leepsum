@@ -277,7 +277,7 @@ class LoremIpsum {
         }
 
         let charactersNbr = text.replace(/[^A-Z]/gi, '').length;
-        resume += `, ${charactersNbr} caractères de <a href="${this.settings.url}">Sid <em>Lipsum</em></a> généré`;
+        resume += `, ${charactersNbr} caractères de <a href="${this.settings.url}">Lee<em>psum</em></a> généré`;
 
         this.dom.footer.innerHTML = `<p><strong>${resume}</strong></p>`;
     }
