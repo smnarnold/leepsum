@@ -19,7 +19,7 @@
             "single": {
                 "item": {
                     "required": 1,
-                    "values": ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "au Sid Lee day", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "pendant un midi formation", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard"]
+                    "values": ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "au Sid Lee day", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "pendant un midi formation", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard", "au début des années 2000"]
                 }
             }
         },
@@ -27,7 +27,7 @@
             "single": {
                 "item": {
                     "required": 1,
-                    "values": ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "Un lendemain de veille", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard"]
+                    "values": ["vendredi 5h", "lundi matin", "lors de la collation de 3h", "Un lendemain de veille", "pendant le déjeuner", "l’autre jour", "pendant un summer friday", "à la fin des années 90", "pendant trois jours", "aujourd’hui", "quelques années plus tard", "au début des années 2000"]
                 }
             }
         }
@@ -96,7 +96,7 @@
                 },
                 "item": {
                     "required": 1,
-                    "values": ["Jean-Francois Bouchard", "Philippe Meunier", "Martin Gauthier", "Techno-Phil", "Simon Arnold", "Andrew Moore", "Guillaume Raymond", "Brian McIntyre", "Louis Jutras", "Hugo Voisine", "Nicolas Trudel", "Jonathan Brûlé", "Frederic Landry", "Patrick Freedom Mayer", "Nicolas Huget Latour", "Yannick Meunier", "David Emmanuel Gadoury", "Maxime Daoust", "Daniel Petitclerc", "René-Charles Arseneau", "Vincent Ramsay", "Francis Ardouin Rodriguez", "Tommy Vincent Mathieu", "Pierre-Paul Samson", "Pierre Lambert", "Éric Briand", "Jonathan Pinard", "Vincent Paradis", "Marc-A. Monette", "Bo Tellier", "Arthur Loiselle", "Guillaume Cardell", "Christian Quenneville", "Yanick Bédard", "François Forget", "Daniel Fortier", "Vincent Hamel", "Marc Lalande", "Alex Pilon", "Jean Bart", "Maxime Levasseur", "Anthony Greene", "Antoine Lorquet-Garneau", "Bernard Bolduc", "Charles St-Onge", "Christian Boutet", "Daniel Fortier", "Eric Briand", "Jean-Philippe Gomez-Sanchez", "Marc-Antoine Leclerc", "Nicolas England", "Samuel Potvin", "Tiago Silva", "Pier-Luc Beaulieu", "Jean-Michel Leroux", "Yannick Chauvette", "Jeff Letor-Bebion"]
+                    "values": ["Jean-Francois Bouchard", "Philippe Meunier", "Martin Gauthier", "Techno-Phil", "Simon Arnold", "Andrew Moore", "Guillaume Raymond", "Brian McIntyre", "Louis Jutras", "Hugo Voisine", "Nicolas Trudel", "Jonathan Brûlé", "Frederic Landry", "Patrick Freedom Mayer", "Nicolas Huget Latour", "Yannick Meunier", "David Emmanuel Gadoury", "Maxime Daoust", "Daniel Petitclerc", "René-Charles Arseneau", "Vincent Ramsay", "Francis Ardouin Rodriguez", "Tommy Vincent Mathieu", "Pierre-Paul Samson", "Pierre Lambert", "Jonathan Pinard", "Vincent Paradis", "Marc-A. Monette", "Bo Tellier", "Arthur Loiselle", "Guillaume Cardell", "Christian Quenneville", "Yanick Bédard", "François Forget", "Daniel Fortier", "Vincent Hamel", "Marc Lalande", "Alex Pilon", "Jean Bart", "Maxime Levasseur", "Anthony Greene", "Antoine Lorquet-Garneau", "Bernard Bolduc", "Charles St-Onge", "Christian Boutet", "Daniel Fortier", "Eric Briand", "Jean-Philippe Gomez-Sanchez", "Marc-Antoine Leclerc", "Nicolas England", "Samuel Potvin", "Tiago Silva", "Pier-Luc Beaulieu", "Jean-Michel Leroux", "Yannick Chauvette", "Jeff Letor-Bebion"]
                 }
             }
         },
