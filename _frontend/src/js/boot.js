@@ -4,6 +4,7 @@ import ligatures from '../json/ligatures';
 class LoremIpsum {
     constructor() {
         this.dom = {
+            form: document.querySelector('form'),
             nbr: document.querySelector('input[name="nbr"]'),
             type: document.querySelectorAll('input[name="type"]'),
             btn: document.querySelector('.js-generate'),
@@ -40,12 +41,16 @@ class LoremIpsum {
     }
 
     bindEvents() {
-        this.dom.btn.addEventListener('click', () => this.setup());
+        //this.dom.btn.addEventListener('click', () => this.setup());
+        this.dom.form.addEventListener('submit', e => this.setup(e));
         this.dom.nbr.addEventListener('change', () => this.settings.nbr = this.dom.nbr.value);
         Array.prototype.forEach.call(this.dom.type, radio => radio.addEventListener('change', () => this.settings.type = radio.value));
     }
 
-    setup() {
+    setup(e) {
+        if(e)
+            e.preventDefault();
+
         let content = '';
         this.usedDictionnary = [];
         
@@ -65,7 +70,7 @@ class LoremIpsum {
 
         switch ( type ) {
             case 'Sentences':
-                content = this.generateSentences();
+                content = this.generateSentences() + " ";
                 break;
             case 'Words':
                 let item = this.getArrRandomValue( this.wordsArr );
