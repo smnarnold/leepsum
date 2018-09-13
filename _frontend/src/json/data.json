@@ -80,7 +80,7 @@
                     "values": ["ont fait", "ont recherchées", "ont offertes", "ont échangées", "ont échafaudées", "ont jetée un coup d’œil à", "ont fait tout ce qu’il fallait pour rendre", "n'ont pas peur de", "ont menées à terme", "ont imaginées", "ont conçues", "ont acquis", "ont sorties", "ont effacées", "omt révolutionnées", "ont repoussées les limites de", "ont gagnées", "ont révolutionnées l’histoire du", "ont refusées", "ont engagées", "ont propulsées", "ont métamorphosées", "y voyaient", "ont sentient", "ont commencées à devenir", "ont fait rayonner", "ont créés", "sont allez rencontrer", "ont rencontrées", "sont revenues de", "ont optimisées", "se sont fait remarquer par", "ont <em>“pitchées”</em>", "ont changées", "ont bâtit ", "ont rejoint"]
                 }
             }
-        },
+        }
     },
     "protagonists": {
         "options": ["persons", "persons", "roles", "roles", ["persons", "persons"], ["roles", "persons"]],
@@ -143,19 +143,19 @@
             "single": {
                 "determining": {
                     "required": 1,
-                    "values": ["une"],
+                    "values": ["une"]
                 },
                 "prefix": {
                     "required": 0.25,
-                    "values": ["vraie licorne de", "guru", "prophète", "ambassadrice", "ninja", "évangeliste", "newbie"],
+                    "values": ["vraie licorne de", "guru", "prophète", "ambassadrice", "ninja", "évangeliste", "newbie"]
                 },
                 "item": {
                     "required": 1,
-                    "values": ["directrice", "productrice", "réalisatrice", "chargée de projets"],
+                    "values": ["directrice", "productrice", "réalisatrice", "chargée de projets"]
                 },
                 "specialisation": {
                     "required": 0.4,
-                    "values": ["artistique", "conseil", "technique", "UI", "de communauté", "de vidéos", "full-stack"],
+                    "values": ["artistique", "conseil", "technique", "UI", "de communauté", "de vidéos", "full-stack"]
                 },
                 "suffix": {
                     "required": 0.35,
