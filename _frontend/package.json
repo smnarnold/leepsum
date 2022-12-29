@@ -14,9 +14,9 @@
     "production": "gulp production"
   },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
+    "@babel/core": "^7.20.7",
     "@babel/preset-env": "^7.1.0",
-    "babel-loader": "^8.0.4",
+    "babel-loader": "^8.3.0",
     "browser-sync": "^2.26.3",
     "colors": "^1.3.2",
     "eslint-config-google": "^0.10.0",
@@ -38,7 +38,7 @@
     "gulp-watch": "^5.0.1",
     "handlebars-helpers": "^0.10.0",
     "handlebars-layouts": "^3.1.4",
-    "imports-loader": "^0.8.0",
+    "imports-loader": "^4.0.1",
     "path": "^0.12.7",
     "require-dir": "^1.1.0",
     "run-sequence": "^2.2.1",
@@ -48,7 +48,7 @@
     "throttle-debounce": "^2.0.1",
     "ua-parser-js": "^0.7.18",
     "uglifyjs-webpack-plugin": "^1.3.0",
-    "webpack": "^4.22.0",
-    "webpack-stream": "^5.1.1"
+    "webpack": "^5.75.0",
+    "webpack-stream": "^7.0.0"
   }
 }
